@@ -12,7 +12,7 @@ const getSpots = (spots) => {
 export const allSpots = (spots) => async(dispatch)=> {
 	const res = await csrfFetch('/api/spots')
 	const data = await res.json();
-	console.log('this is the data', data); // do this before adding the dispatch
+	// console.log('this is the data', data); // do this before adding the dispatch
 	dispatch(getSpots(data));
 }
 
