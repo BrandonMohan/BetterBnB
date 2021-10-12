@@ -22,47 +22,47 @@ module.exports = {
       },
       {
         email: faker.internet.email(),
-        username: faker.name.findName(),
+        username: faker.name.firstName(),
         hashedPassword: bcrypt.hashSync(faker.internet.password()),
       },
       {
         email: faker.internet.email(),
-        username: faker.name.findName(),
+        username: faker.name.firstName(),
         hashedPassword: bcrypt.hashSync(faker.internet.password()),
       },
       {
         email: faker.internet.email(),
-        username: faker.name.findName(),
+        username: faker.name.firstName(),
         hashedPassword: bcrypt.hashSync(faker.internet.password()),
       },
       {
         email: faker.internet.email(),
-        username: faker.name.findName(),
+        username: faker.name.firstName(),
         hashedPassword: bcrypt.hashSync(faker.internet.password()),
       },
       {
         email: faker.internet.email(),
-        username: faker.name.findName(),
+        username: faker.name.firstName(),
         hashedPassword: bcrypt.hashSync(faker.internet.password()),
       },
       {
         email: faker.internet.email(),
-        username: faker.name.findName(),
+        username: faker.name.firstName(),
         hashedPassword: bcrypt.hashSync(faker.internet.password()),
       },
       {
         email: faker.internet.email(),
-        username: faker.name.findName(),
+        username: faker.name.firstName(),
         hashedPassword: bcrypt.hashSync(faker.internet.password()),
       },
       {
         email: faker.internet.email(),
-        username: faker.name.findName(),
+        username: faker.name.firstName(),
         hashedPassword: bcrypt.hashSync(faker.internet.password()),
       },
       {
         email: faker.internet.email(),
-        username: faker.name.findName(),
+        username: faker.name.firstName(),
         hashedPassword: bcrypt.hashSync(faker.internet.password()),
       }
     ], {});
