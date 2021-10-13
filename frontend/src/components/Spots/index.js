@@ -14,11 +14,11 @@ const SpotsBrowser = () => {
                     {spots.map((spot) => {
                         return (
                             <div className='listings'>
-                                <img src={spot.Images[0].url}></img>
+                                <img src={spot.Images[0].url} alt={spot.name}></img>
                                     <NavLink key={spot.id} to={`/spots/${spot.id}`}>
-                                        {spot.name}''
-                                        {spot.price}
+                                        {spot.name}
                                     </NavLink>
+                                    ${spot.price} per night.
                             </div>
                             )
                      })}
