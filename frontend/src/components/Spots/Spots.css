@@ -1,0 +1,18 @@
+.listings_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.listing_19 {
+    height: 10em;
+    width: 10em;
+    background-image: url('https://a0.muscache.com/im/pictures/269a6d6e-83ac-418b-a35a-8d531115e754.jpg?im_w=1200');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.image {
+    height: 10em;
+    width: 10em;
+}
