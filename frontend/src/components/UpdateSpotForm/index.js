@@ -49,7 +49,7 @@ const EditSpotForm = () => {
 
 
     return (
-        <section className="new-spot-form">
+        <section className="update-spot-form">
             <form onSubmit={handleSubmit}>
                 <input
                 type='text'

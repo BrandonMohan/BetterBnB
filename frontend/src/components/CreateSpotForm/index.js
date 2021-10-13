@@ -38,7 +38,7 @@ const CreateSpotForm = () => {
             price
         }
 
-        let createdSpot = await dispatch(addOneSpots(payload, userId))
+        let createdSpot = await dispatch(addOneSpots(payload, userId, imageUrl))
         console.log(createdSpot);
 
         if(createdSpot) {

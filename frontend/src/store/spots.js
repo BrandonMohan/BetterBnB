@@ -11,10 +11,10 @@ const getSpots = (spots) => {
 }
 }
 
-const addSpot = (spots) => {
+const addSpot = (spot) => {
     return {
     type: ADD_ONE,
-    spots
+    spot
 }
 }
 
@@ -25,25 +25,26 @@ export const allSpots = (spots) => async(dispatch)=> {
 	dispatch(getSpots(data));
 }
 
-export const addOneSpots = (payload, userId, spotId) => async dispatch => {
+export const addOneSpots = (payload, userId, imageUrl) => async dispatch => {
 
     const token = Cookies.get('XSRF-TOKEN');
-    const response = await fetch(`/api/spots/${spotId}`, {
+    const response = await fetch(`/api/spots`, {
         method: 'POST',
         headers: {
             'Content-Type' : 'application/json',
             'XSRF-TOKEN': `${token}`
           },
-        body: JSON.stringify({...payload, userId})
+        body: JSON.stringify({...payload, userId, imageUrl})
     })
 
     if (response.ok) {
         const spot = await response.json()
+        console.log('line 41', spot);
         dispatch(addSpot(spot))
     }
 }
 
-export const updateSpots = (id, spot) => async dispatch => {
+export const updateSpots = (spot, id) => async dispatch => {
     const response = await csrfFetch(`/api/spots/${id}`, {
       method: 'PUT',
       headers: {
@@ -69,6 +70,7 @@ const spotsReducer = (state = {}, action) => {
             });
             return newState;
         case ADD_ONE:
+            console.log('action clg', action.spot);
             return {
                 ...state,
                 [action.spot?.id]: action.spot
