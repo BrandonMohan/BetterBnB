@@ -25,11 +25,13 @@ function App() {
           <Route path="/signup">
             <SignupFormPage />
           </Route>
+          <Route path='/spots/:id'>
+          <EditSpotForm />
+          </Route>
           <Route path='/'>
             <h1>Home page</h1>
             <SpotsBrowser />
             <CreateSpotForm />
-            <EditSpotForm />
           </Route>
         </Switch>
       )}
