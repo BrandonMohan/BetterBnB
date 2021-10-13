@@ -1,9 +1,9 @@
 import { useEffect, useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addOneSpots } from '../../store/spots';
-import { useHistory } from 'react-router-dom';
+import { updateSpots } from '../../store/spots';
+import { useHistory, useParams } from 'react-router-dom';
 
-const CreateSpotForm = () => {
+const EditSpotForm = () => {
     const dispatch = useDispatch();
     const history = useHistory();
     const [address, setAddress] = useState('')
@@ -14,6 +14,7 @@ const CreateSpotForm = () => {
     const [price, setPrice] = useState('')
     const userId = useSelector((state) => state.session?.user?.id);
     const [imageUrl, setImageUrl] = useState('')
+    const { id } = useParams();
 
     const updateAddress = (e) => setAddress(e.target.value)
     const updateCity = (e) => setCity(e.target.value)
@@ -38,11 +39,11 @@ const CreateSpotForm = () => {
             price
         }
 
-        let createdSpot = await dispatch(addOneSpots(payload, userId))
-        console.log(createdSpot);
+        let updateSpot = await dispatch(updateSpots(payload, id))
+        console.log(updateSpot);
 
-        if(createdSpot) {
-            history.push(`/spots/${createdSpot.id}`);
+        if(updateSpot) {
+            history.push(`/spots/${updateSpot.id}`);
         }
     };
 
@@ -93,10 +94,10 @@ const CreateSpotForm = () => {
                 onChange={updateImageUrl}
                 required
                 />
-                <button type='submit'>Create new Spot</button>
+                <button type='submit'>Submit Edit Spot</button>
             </form>
         </section>
     );
 };
 
-export default CreateSpotForm;
+export default EditSpotForm;
