@@ -12,7 +12,7 @@ module.exports = {
       Example:*/
       return queryInterface.bulkInsert('Spots', [
         {
-          userId: 28,
+          userId: 1,
           address: '123',
           city: 'San Francisco',
           state: 'CA',
@@ -23,7 +23,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          userId: 29,
+          userId: 2,
           address: faker.address.streetAddress(),
           city: faker.address.city(),
           state: faker.address.state(),
@@ -34,7 +34,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          userId: 30,
+          userId: 3,
           address: faker.address.streetAddress(),
           city: faker.address.city(),
           state: faker.address.state(),
@@ -45,7 +45,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          userId: 31,
+          userId: 4,
           address: faker.address.streetAddress(),
           city: faker.address.city(),
           state: faker.address.state(),
@@ -56,7 +56,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          userId: 32,
+          userId: 5,
           address: faker.address.streetAddress(),
           city: faker.address.city(),
           state: faker.address.state(),
@@ -67,7 +67,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          userId: 33,
+          userId: 6,
           address: faker.address.streetAddress(),
           city: faker.address.city(),
           state: faker.address.state(),
@@ -78,7 +78,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          userId: 34,
+          userId: 7,
           address: faker.address.streetAddress(),
           city: faker.address.city(),
           state: faker.address.state(),
@@ -89,7 +89,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          userId: 35,
+          userId: 8,
           address: faker.address.streetAddress(),
           city: faker.address.city(),
           state: faker.address.state(),
@@ -100,7 +100,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          userId: 36,
+          userId: 9,
           address: faker.address.streetAddress(),
           city: faker.address.city(),
           state: faker.address.state(),
@@ -111,7 +111,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          userId: 37,
+          userId: 10,
           address: faker.address.streetAddress(),
           city: faker.address.city(),
           state: faker.address.state(),
@@ -122,7 +122,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          userId: 38,
+          userId: 11,
           address: faker.address.streetAddress(),
           city: faker.address.city(),
           state: faker.address.state(),
@@ -133,7 +133,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          userId: 39,
+          userId: 12,
           address: faker.address.streetAddress(),
           city: faker.address.city(),
           state: faker.address.state(),
@@ -144,7 +144,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          userId: 40,
+          userId: 13,
           address: faker.address.streetAddress(),
           city: faker.address.city(),
           state: faker.address.state(),
@@ -155,7 +155,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          userId: 41,
+          userId: 14,
           address: faker.address.streetAddress(),
           city: faker.address.city(),
           state: faker.address.state(),
@@ -166,7 +166,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          userId: 42,
+          userId: 15,
           address: faker.address.streetAddress(),
           city: faker.address.city(),
           state: faker.address.state(),
@@ -177,7 +177,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          userId: 43,
+          userId: 16,
           address: faker.address.streetAddress(),
           city: faker.address.city(),
           state: faker.address.state(),
@@ -188,7 +188,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          userId: 44,
+          userId: 17,
           address: faker.address.streetAddress(),
           city: faker.address.city(),
           state: faker.address.state(),
@@ -199,7 +199,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          userId: 45,
+          userId: 18,
           address: faker.address.streetAddress(),
           city: faker.address.city(),
           state: faker.address.state(),

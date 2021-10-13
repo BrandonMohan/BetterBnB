@@ -13,11 +13,12 @@ const SpotsBrowser = () => {
                 <nav>
                     {spots.map((spot) => {
                         return (
-                            <div className={`listing_${spot.id}`}>
-                                {/* <img src={spot.images.url}></img> */}
-                                <NavLink key={spot.id} to={`/spots/${spot.id}`}>
-                                    {spot.name} -
-                                </NavLink>
+                            <div className='listings'>
+                                <img src={spot.Images[0].url} alt={spot.name}></img>
+                                    <NavLink key={spot.id} to={`/spots/${spot.id}`}>
+                                        {spot.name}
+                                    </NavLink>
+                                    ${spot.price} per night.
                             </div>
                             )
                      })}
