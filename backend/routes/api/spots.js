@@ -12,6 +12,11 @@ router.get('/', asyncHandler(async(req, res)=> {
     return res.json(spots)
 }));
 
+router.get('/:id', asyncHandler(async(req, res)=>{
+  const spot = await Spot.findOne({id: req.params.id})
+  return res.json(spot)
+}))
+
 router.post(
     `/`,
     asyncHandler(async function (req, res) {
@@ -31,6 +36,20 @@ router.post(
       const spot = await Spot.findByPk(req.params.id);
         spot.update(req.body);
       return res.json(spot);
+    })
+  );
+
+  router.delete(
+    '/:id(\\d)',
+    asyncHandler(async (req, res, next) => {
+      const postId = req.params.id
+      const findSpot = await Spot.findByPk(postId);
+        if(findSpot) {
+          const spot = await findSpot.destroy();
+          res.status(204).end();
+        }else {
+          next();
+        }
     })
   );
 
