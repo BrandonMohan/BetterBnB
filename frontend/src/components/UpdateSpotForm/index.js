@@ -13,7 +13,6 @@ const EditSpotForm = () => {
     const [name, setName] = useState('')
     const [price, setPrice] = useState('')
     const userId = useSelector((state) => state.session?.user?.id);
-    const [imageUrl, setImageUrl] = useState('')
     const { id } = useParams();
 
     const updateAddress = (e) => setAddress(e.target.value)
@@ -22,7 +21,6 @@ const EditSpotForm = () => {
     const updateCountry = (e) => setCountry(e.target.value)
     const updateName = (e) => setName(e.target.value)
     const updatePrice = (e) => setPrice(e.target.value)
-    const updateImageUrl = (e) => setImageUrl(e.target.value)
 
 
 
@@ -42,9 +40,9 @@ const EditSpotForm = () => {
         let updateSpot = await dispatch(updateSpots(payload, id))
         console.log(updateSpot);
 
-        if(updateSpot) {
-            history.push(`/spots`);
-        }
+        // if(updateSpot) {
+        //     history.push(`/`);
+        // }
     };
 
 
@@ -86,13 +84,6 @@ const EditSpotForm = () => {
                 placeholder='Price'
                 value={price}
                 onChange={updatePrice}
-                />
-                <input
-                type='text'
-                placeholder='image-url'
-                value={imageUrl}
-                onChange={updateImageUrl}
-                required
                 />
                 <button type='submit'>Submit Edit Spot</button>
             </form>

@@ -7,7 +7,7 @@ import './Spots.css'
 const SpotsBrowser = () => {
     const dispatch = useDispatch();
     const spots = useSelector(state => Object.values(state.spots))
-    console.log('IMAGE CLG', spots);
+    // console.log('IMAGE CLG', spots);
 
     useEffect(() => {
         dispatch(allSpots());

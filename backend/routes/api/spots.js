@@ -37,8 +37,11 @@ router.post(
     '/:id',
     asyncHandler(async function (req, res) {
       const spot = await Spot.findByPk(req.params.id);
-        spot.update(req.body);
-      return res.json(spot);
+      spot.update(req.body);
+      const newSpot = await Spot.findByPk(req.params.id, {
+        include: Image
+      });
+      return res.json(newSpot)
     })
   );
 
