@@ -35,10 +35,9 @@ const Reviews = () => {
         }
     };
 
-    const handleDelete = async (e) => {
-        e.preventDefault()
+    const handleDelete = async (reviewId) => {
 
-        dispatch(deleteReview(id))
+        dispatch(deleteReview(reviewId))
     }
 
     return(
@@ -48,7 +47,7 @@ const Reviews = () => {
                     {reviews?.map((review) => {
                         return(
                          <li key={review.id}>{review.review}
-                         <button type="button" onClick={handleDelete}>Delete Review</button></li>
+                         <button type="button" onClick={()=>handleDelete(review.id)}>Delete Review</button></li>
                         )
                     })}
                 </ul>

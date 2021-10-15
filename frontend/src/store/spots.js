@@ -86,6 +86,7 @@ export const updateSpots = (spot, id) => async dispatch => {
           method: 'DELETE',
           headers: { 'Content-Type': 'application/json',}
       })
+      dispatch(removeSpots(spotId))
       return response;
   }
 
@@ -106,7 +107,7 @@ const spotsReducer = (state = {}, action) => {
             }
         case REMOVE_SPOTS: {
             const newState = { ...state };
-            delete newState[action.itemId];
+            delete newState[action.spot];
             return newState;
             }
         case GET_ONE:

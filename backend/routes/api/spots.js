@@ -43,7 +43,7 @@ router.post(
   );
 
   router.delete(
-    '/:id(\\d)',
+    '/:id',
     asyncHandler(async (req, res, next) => {
       const postId = req.params.id
       const findSpot = await Spot.findByPk(postId);

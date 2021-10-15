@@ -54,6 +54,7 @@ export const deleteReview = (reviewId) => async dispatch => {
         headers: {'Content-Type': 'application/json',},
         // body: JSON.stringify(reviewId),
     })
+    dispatch(removeReview(reviewId))
     return response;
 }
 
@@ -71,7 +72,7 @@ const reviewsReducer = (state = {}, action) => {
             }
             case REMOVE_REVIEW: {
                 const newState = { ...state };
-                delete newState[action.itemId];
+                delete newState[action.review];
                 return newState;
             }
 
