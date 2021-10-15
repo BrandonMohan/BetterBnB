@@ -1,0 +1,200 @@
+[33mcommit d9dfba3fb73a208ced6fa150e6903484c0ac181b[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31mheroku/main[m[33m)[m
+Author: BrandonMohan <barndonmo@gmail.com>
+Date:   Fri Oct 15 14:10:58 2021 -0400
+
+    fixed both deletes
+
+[33mcommit 2617b452f18c90ebf2032bc2dc66dc2677d4e3ee[m
+Author: BrandonMohan <barndonmo@gmail.com>
+Date:   Fri Oct 15 12:32:46 2021 -0400
+
+    working on heroku
+
+[33mcommit 23cf6c9a19399eb576ba53233e64733b6ee258d7[m
+Author: BrandonMohan <barndonmo@gmail.com>
+Date:   Thu Oct 14 19:30:48 2021 -0400
+
+    working on delete for reviews and spots
+
+[33mcommit 2d1764b8ea9891b252ee56ff97b68aab5fcb1967[m
+Merge: df045cf 4439276
+Author: BrandonMohan <61606838+BrandonMohan@users.noreply.github.com>
+Date:   Thu Oct 14 12:03:44 2021 -0400
+
+    Merge pull request #7 from BrandonMohan/spots
+    
+    working on splashpage
+
+[33mcommit 4439276234f724ed635dd669454a5b65c64dc309[m[33m ([m[1;31morigin/spots[m[33m, [m[1;32mspots[m[33m)[m
+Author: BrandonMohan <barndonmo@gmail.com>
+Date:   Thu Oct 14 12:02:46 2021 -0400
+
+    working on splashpage
+
+[33mcommit df045cfc14868d239b62a9e4e4ca8985d53382d1[m
+Merge: e608aca 0061ed7
+Author: BrandonMohan <61606838+BrandonMohan@users.noreply.github.com>
+Date:   Wed Oct 13 19:05:52 2021 -0400
+
+    Merge pull request #6 from BrandonMohan/spots
+    
+    working add and edit
+
+[33mcommit 0061ed729b8b568fa1294b0b3b80120018bef204[m
+Author: BrandonMohan <barndonmo@gmail.com>
+Date:   Wed Oct 13 19:03:43 2021 -0400
+
+    working add and edit
+
+[33mcommit e608aca7263150fbf7e2fec14e06d1667c02ac44[m
+Merge: 0d0b1f7 94ff070
+Author: BrandonMohan <61606838+BrandonMohan@users.noreply.github.com>
+Date:   Wed Oct 13 18:10:36 2021 -0400
+
+    Merge pull request #5 from BrandonMohan/spots
+    
+    working on put
+
+[33mcommit 94ff070ff2e7738e854e641ec3657b66257c557c[m
+Author: BrandonMohan <barndonmo@gmail.com>
+Date:   Wed Oct 13 18:10:18 2021 -0400
+
+    working on put
+
+[33mcommit 0d0b1f73ccad61641ccf3cc8fa0f479a5cc6e7c8[m
+Merge: 19390e5 b706258
+Author: BrandonMohan <61606838+BrandonMohan@users.noreply.github.com>
+Date:   Wed Oct 13 18:10:07 2021 -0400
+
+    Merge pull request #4 from BrandonMohan/spots
+    
+    Spots
+
+[33mcommit b706258e287b76d85ec87a38fbdeeedc62bea489[m
+Author: BrandonMohan <barndonmo@gmail.com>
+Date:   Wed Oct 13 14:00:28 2021 -0400
+
+    working on create spot
+
+[33mcommit 324a1715e4536c5741a3e686ddc98c3f09779ae8[m
+Author: BrandonMohan <barndonmo@gmail.com>
+Date:   Tue Oct 12 21:30:49 2021 -0400
+
+    css stuff for spots
+
+[33mcommit 19390e50c3c96fcc484ea071c5b9a95975827b84[m
+Merge: d5d3960 9f01f1e
+Author: BrandonMohan <61606838+BrandonMohan@users.noreply.github.com>
+Date:   Tue Oct 12 20:01:37 2021 -0400
+
+    Merge pull request #3 from BrandonMohan/spots
+    
+    Spots
+
+[33mcommit 9f01f1ebd6f0aa788b22152e395796f1664ea4cb[m
+Author: BrandonMohan <barndonmo@gmail.com>
+Date:   Tue Oct 12 19:57:11 2021 -0400
+
+    working on card images
+
+[33mcommit 021018ecf6f268baf14429d2079fe501c1163cfd[m
+Author: BrandonMohan <barndonmo@gmail.com>
+Date:   Tue Oct 12 16:38:15 2021 -0400
+
+    spots rendering
+
+[33mcommit d5d3960e23cb7add8723f7d3b660c2572f212509[m
+Merge: bde9afd f7909b8
+Author: BrandonMohan <61606838+BrandonMohan@users.noreply.github.com>
+Date:   Tue Oct 12 16:37:15 2021 -0400
+
+    Merge pull request #2 from BrandonMohan/spots
+    
+    get spots
+
+[33mcommit f7909b86da843a407ab2b8455a94f1731a551f6f[m
+Author: BrandonMohan <barndonmo@gmail.com>
+Date:   Tue Oct 12 14:27:33 2021 -0400
+
+    get spots
+
+[33mcommit bde9afdd7c03bee3e8f5b9a8d5b869a59ac8e4c3[m
+Merge: a252cbf 05b53b7
+Author: BrandonMohan <61606838+BrandonMohan@users.noreply.github.com>
+Date:   Tue Oct 12 09:47:43 2021 -0400
+
+    Merge pull request #1 from BrandonMohan/spots
+    
+    seeder stuff
+
+[33mcommit 05b53b7bfab2c21439c64c699cb16100de70491d[m
+Author: BrandonMohan <barndonmo@gmail.com>
+Date:   Tue Oct 12 09:47:14 2021 -0400
+
+    seeder stuff
+
+[33mcommit a252cbfff9a5e9820df38df955fa1cbcd8d03490[m
+Author: Brandon Mohan <barndonmo@gmail.com>
+Date:   Tue Oct 12 09:05:05 2021 -0400
+
+    finished assosciations
+
+[33mcommit d9e76be1cddd92bad2cd991e91fece7bfb30f818[m
+Author: BrandonMohan <barndonmo@gmail.com>
+Date:   Tue Oct 12 08:51:32 2021 -0400
+
+    mini push
+
+[33mcommit bc5d711eaa6ad562406cb757eb4c2a6d35be3062[m
+Author: BrandonMohan <barndonmo@gmail.com>
+Date:   Mon Oct 11 18:47:13 2021 -0400
+
+    db
+
+[33mcommit 5283f06ed2e6f06acae95080fcbd860c613ca98c[m
+Author: BrandonMohan <barndonmo@gmail.com>
+Date:   Sun Oct 10 16:16:13 2021 -0400
+
+    heroku
+
+[33mcommit aef038607de17897cab6d36611264c63f7b23b87[m
+Author: BrandonMohan <barndonmo@gmail.com>
+Date:   Sun Oct 10 15:45:49 2021 -0400
+
+    working login
+
+[33mcommit 221bf0315b4beb2b8c533a8823fa893787da2edd[m
+Author: BrandonMohan <barndonmo@gmail.com>
+Date:   Sun Oct 10 14:37:48 2021 -0400
+
+    finished frontend
+
+[33mcommit dc8ad7e3dde8bdd402b641c6ad9e1ab4a11d2e06[m
+Author: BrandonMohan <barndonmo@gmail.com>
+Date:   Sun Oct 10 13:40:07 2021 -0400
+
+    frontend commit
+
+[33mcommit 6dc7b42f7cbfbffcc5622fc7f73a913761bea772[m
+Author: BrandonMohan <barndonmo@gmail.com>
+Date:   Sun Oct 10 08:19:10 2021 -0400
+
+    backend
+
+[33mcommit ede34968ce254809b8abab0d16d00e89481888fe[m
+Author: BrandonMohan <barndonmo@gmail.com>
+Date:   Sun Oct 10 06:44:51 2021 -0400
+
+    login
+
+[33mcommit 40958a3282b64c6e1455e4ede86ff6e7b4da5b17[m
+Author: BrandonMohan <barndonmo@gmail.com>
+Date:   Sun Oct 10 06:26:51 2021 -0400
+
+    post api testing
+
+[33mcommit 1a19ee32fd0bc5c142923743067d7562e1bf77da[m
+Author: BrandonMohan <barndonmo@gmail.com>
+Date:   Sun Oct 10 06:22:41 2021 -0400
+
+    first commit

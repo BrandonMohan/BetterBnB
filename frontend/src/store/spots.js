@@ -4,6 +4,7 @@ const GET_SPOTS = 'spots/getSpots'
 const ADD_ONE = 'spots/ADD_ONE'
 const REMOVE_SPOTS = 'spots/REMOVE_SPOTS'
 const GET_ONE = 'spots/GET_ONE'
+const UPDATE_ONE = 'spots/UPDATE_ONE'
 
 const getSpots = (spots) => {
 	return {
@@ -33,6 +34,13 @@ const removeSpots = (spot) => {
     }
 }
 
+const updateOne = (spot) => {
+    return {
+        type: UPDATE_ONE,
+        spot
+    }
+}
+
 export const allSpots = (spots) => async(dispatch)=> {
 	const res = await csrfFetch('/api/spots')
 	const data = await res.json();
@@ -41,7 +49,7 @@ export const allSpots = (spots) => async(dispatch)=> {
 }
 
 export const getOneSpot = (spot) => async (dispatch) => {
-    const res = await fetch(`/api/spots/${spot}`)
+    const res = await csrfFetch(`/api/spots/${spot}`)
     const oneSpot = await res.json();
     dispatch(getOne(oneSpot))
 }
@@ -49,7 +57,7 @@ export const getOneSpot = (spot) => async (dispatch) => {
 export const addOneSpots = (payload, userId, imageUrl) => async dispatch => {
 
     const cookie = Cookies.get('XSRF-TOKEN');
-    const response = await fetch(`/api/spots`, {
+    const response = await csrfFetch(`/api/spots`, {
         method: 'POST',
         headers: {
             'Content-Type' : 'application/json',
@@ -71,12 +79,12 @@ export const updateSpots = (spot, id) => async dispatch => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({spot}),
+      body: JSON.stringify(spot),
     });
 
     if (response.ok) {
       const spot = await response.json();
-      dispatch(addSpot(spot));
+      dispatch(updateOne(spot));
       return spot;
     }
   };
@@ -110,6 +118,11 @@ const spotsReducer = (state = {}, action) => {
             delete newState[action.spot];
             return newState;
             }
+        case UPDATE_ONE: {
+            return{
+            ...state,
+            [action.spot.id]: action.spot
+        }}
         case GET_ONE:
             return {
              ...state,
