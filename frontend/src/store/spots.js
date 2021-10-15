@@ -2,7 +2,8 @@ import { csrfFetch } from './csrf';
 import Cookies from 'js-cookie'
 const GET_SPOTS = 'spots/getSpots'
 const ADD_ONE = 'spots/ADD_ONE'
-
+const REMOVE_SPOTS = 'spots/REMOVE_SPOTS'
+const GET_ONE = 'spots/GET_ONE'
 
 const getSpots = (spots) => {
 	return {
@@ -18,6 +19,20 @@ const addSpot = (spot) => {
 }
 }
 
+const getOne = (spot) => {
+    return {
+        type: GET_ONE,
+        spot
+    }
+}
+
+const removeSpots = (spot) => {
+    return {
+        type: REMOVE_SPOTS,
+        spot
+    }
+}
+
 export const allSpots = (spots) => async(dispatch)=> {
 	const res = await csrfFetch('/api/spots')
 	const data = await res.json();
@@ -25,14 +40,20 @@ export const allSpots = (spots) => async(dispatch)=> {
 	dispatch(getSpots(data));
 }
 
+export const getOneSpot = (spot) => async (dispatch) => {
+    const res = await fetch(`/api/spots/${spot}`)
+    const oneSpot = await res.json();
+    dispatch(getOne(oneSpot))
+}
+
 export const addOneSpots = (payload, userId, imageUrl) => async dispatch => {
 
-    const token = Cookies.get('XSRF-TOKEN');
+    const cookie = Cookies.get('XSRF-TOKEN');
     const response = await fetch(`/api/spots`, {
         method: 'POST',
         headers: {
             'Content-Type' : 'application/json',
-            'XSRF-TOKEN': `${token}`
+            'XSRF-TOKEN': `${cookie}`
           },
         body: JSON.stringify({...payload, userId, imageUrl})
     })
@@ -60,6 +81,14 @@ export const updateSpots = (spot, id) => async dispatch => {
     }
   };
 
+  export const deleteSpots = (spotId) => async dispatch => {
+      const response = await csrfFetch(`/api/spots/${spotId}`, {
+          method: 'DELETE',
+          headers: { 'Content-Type': 'application/json',}
+      })
+      return response;
+  }
+
 const spotsReducer = (state = {}, action) => {
     let newState;
     switch(action.type) {
@@ -75,6 +104,16 @@ const spotsReducer = (state = {}, action) => {
                 ...state,
                 [action.spot?.id]: action.spot
             }
+        case REMOVE_SPOTS: {
+            const newState = { ...state };
+            delete newState[action.itemId];
+            return newState;
+            }
+        case GET_ONE:
+            return {
+             ...state,
+             [action.spot.id]: action.spot
+         }
         default:
             return state;
     }

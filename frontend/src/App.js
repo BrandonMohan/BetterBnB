@@ -5,7 +5,10 @@ import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import { allSpots } from './store/spots'
+import { allReviews } from './store/reviews'
 import SpotsBrowser from "./components/Spots";
+import SingleSpot from "./components/SingleSpot"
+import Reviews from "./components/Reviews";
 import CreateSpotForm from "./components/CreateSpotForm";
 import EditSpotForm from "./components/UpdateSpotForm";
 
@@ -14,7 +17,6 @@ function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
     dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
-    dispatch(allSpots())
   }, [dispatch]);
 
   return (
@@ -26,7 +28,9 @@ function App() {
             <SignupFormPage />
           </Route>
           <Route path='/spots/:id'>
+          <SingleSpot />
           <EditSpotForm />
+          <Reviews />
           </Route>
           <Route path='/'>
             <h1>Home page</h1>

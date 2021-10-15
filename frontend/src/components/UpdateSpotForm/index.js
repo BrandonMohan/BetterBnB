@@ -43,7 +43,7 @@ const EditSpotForm = () => {
         console.log(updateSpot);
 
         if(updateSpot) {
-            history.push(`/spots/${updateSpot.id}`);
+            history.push(`/spots`);
         }
     };
 
