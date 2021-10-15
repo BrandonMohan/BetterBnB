@@ -30,8 +30,8 @@ const SingleSpot = () => {
     return(
         <>
             <div className={'single_spot'}>
-                {/* <img src={spot[0]?.Images[0].url} alt={spot?.name}></img> */}
-                 {/* <p>{spot[0]?.name}</p> */}
+                <img src={spot?.Images[0].url} alt={spot?.name}></img>
+                 <p>{spot?.name}</p>
                  <button type="button" onClick={handleDelete}>Delete Spot</button>
              </div>
         </>

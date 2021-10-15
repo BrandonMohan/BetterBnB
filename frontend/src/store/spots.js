@@ -125,7 +125,7 @@ const spotsReducer = (state = {}, action) => {
         }}
         case GET_ONE:
             return {
-             ...state,
+                ...state,
              [action.spot.id]: action.spot
          }
         default:
