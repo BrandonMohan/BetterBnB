@@ -57,7 +57,7 @@ export const getOneSpot = (spot) => async (dispatch) => {
 export const addOneSpots = (payload, userId, imageUrl) => async dispatch => {
 
     const cookie = Cookies.get('XSRF-TOKEN');
-    const response = await csrfFetch(`/api/spots`, {
+    const response = await fetch(`/api/spots`, {
         method: 'POST',
         headers: {
             'Content-Type' : 'application/json',
