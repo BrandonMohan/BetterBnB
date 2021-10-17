@@ -5,7 +5,6 @@
 http://better-bnb.herokuapp.com
 
 # Development
-* Learn more about this project by visiting the wiki for Remember The Knot https://github.com/iethan-h/Remember-the-Knot/wiki
 * To start the development enviroment:
   1. Clone the repository
   2. Run npm install from the backend folder.
