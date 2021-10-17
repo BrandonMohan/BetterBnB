@@ -29,4 +29,5 @@ http://better-bnb.herokuapp.com
 
 
  # Database Schema
-https://user-images.githubusercontent.com/61606838/136819076-73340a5a-f8c6-478b-b83c-ab18ff76e5ff.png
+![Untitled (1)](https://user-images.githubusercontent.com/61606838/137645504-50c238cc-3551-4dab-afc6-7ed65ecfe78c.png)
+
