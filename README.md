@@ -4,7 +4,7 @@
 #Live Server
 http://better-bnb.herokuapp.com
 
-# Development
+# Deployment
 * To start the development enviroment:
   1. Clone the repository
   2. Run npm install from the backend folder.
