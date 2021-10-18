@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { NavLink, Route, useParams } from 'react-router-dom'
 import { allSpots } from '../../store/spots'
+import CreateSpotModal from '../CreateSpotForm'
 import './Spots.css'
 
 const SpotsBrowser = () => {
@@ -14,23 +15,27 @@ const SpotsBrowser = () => {
     }, [dispatch]);
 
     return(
-        <>
+        <div className="spots_body">
+            <h1 className="spots_header">Available Spots</h1>
+            <CreateSpotModal />
             <div className="listings_container">
                 <nav>
                     {spots?.map((spot) => {
                         return (
                             <div className='listings'>
-                                <img src={spot.Images[0].url} alt={spot.name}></img>
-                                    <NavLink to={`/spots/${spot.id}`}>
-                                        {spot.name}
-                                    </NavLink>
-                                    ${spot.price} per night.
+                                {/* <div className='listing_card'> */}
+                                    <img className="image" src={spot.Images[0].url} alt={spot.name}></img>
+                                        <NavLink className="spots_names" to={`/spots/${spot.id}`}>
+                                            {spot.name}
+                                        </NavLink>
+                                        ${spot.price} per night.
+                                {/* </div> */}
                             </div>
                             )
-                     })}
-                    </nav>
+                        })}
+                </nav>
             </div>
-        </>
+        </div>
     )
 }
 

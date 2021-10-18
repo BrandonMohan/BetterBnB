@@ -9,8 +9,9 @@ import { allReviews } from './store/reviews'
 import SpotsBrowser from "./components/Spots";
 import SingleSpot from "./components/SingleSpot"
 import Reviews from "./components/Reviews";
-import CreateSpotForm from "./components/CreateSpotForm";
-import EditSpotForm from "./components/UpdateSpotForm";
+import CreateSpotModal from "./components/CreateSpotForm";
+import EditFormModal from "./components/UpdateSpotForm";
+import Footer from "./components/Footer"
 
 function App() {
   const dispatch = useDispatch();
@@ -29,13 +30,11 @@ function App() {
           </Route>
           <Route path='/spots/:id'>
           <SingleSpot />
-          <EditSpotForm />
+          <EditFormModal />
           <Reviews />
           </Route>
           <Route path='/'>
-            <h1>Home page</h1>
             <SpotsBrowser />
-            <CreateSpotForm />
           </Route>
         </Switch>
       )}

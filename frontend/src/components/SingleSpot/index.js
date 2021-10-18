@@ -12,6 +12,7 @@ const SingleSpot = () => {
     const { id } = useParams();
     const history = useHistory();
     const dispatch = useDispatch();
+    const userId = useSelector((state) => state.session?.user?.id)
 
     useEffect(() => {
         dispatch(getOneSpot(id))
@@ -30,10 +31,20 @@ const SingleSpot = () => {
     return(
         <>
             <div className={'single_spot'}>
-                <img src={spot?.Images[0].url} alt={spot?.name}></img>
-                 <p>{spot?.name}</p>
-                 <button type="button" onClick={handleDelete}>Delete Spot</button>
-             </div>
+                <img className="single_spot_img" src={spot?.Images[0].url} alt={spot?.name}></img>
+                 <ul className="single_spot_details">
+                     <li className="single_spot_li">{spot?.name}</li>
+                     <li className="single_spot_li">{spot?.address}</li>
+                     <li className="single_spot_li">{spot?.city}</li>
+                     <li className="single_spot_li">{spot?.state}</li>
+                     <li className="single_spot_li">{spot?.country}</li>
+                     <li className="single_spot_li">${spot?.price} per night</li>
+
+                 </ul>
+                 </div>
+                {spot?.userId === userId ?
+                 <button type="button" onClick={handleDelete}>Delete Spot</button> :
+                  null}
         </>
     )
 }

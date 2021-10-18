@@ -47,11 +47,17 @@ const Reviews = () => {
                     {reviews?.map((review) => {
                         return(
                          <li key={review.id}>{review.review}
-                         <button type="button" onClick={()=>handleDelete(review.id)}>Delete Review</button></li>
+                         {review?.userId === userId ?
+
+                             <button type="button" onClick={()=>handleDelete(review.id)}>Delete Review</button>
+                        :
+
+                             null}
+                             </li>
                         )
                     })}
                 </ul>
-                <form onSubmit={handleSubmit}>
+                <form className="form" onSubmit={handleSubmit}>
                     <input
                     type='text'
                     placeholder='Leave a Review'
